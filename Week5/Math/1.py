@@ -4,4 +4,4 @@ print(min(t), max(t))
 print(pow(2,6))
 
 import math
-print(math.sqrt(4))
+print(math.sqrt(25))

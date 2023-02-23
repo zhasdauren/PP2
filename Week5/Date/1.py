@@ -29,7 +29,13 @@ print(diff)
 today = datetime.datetime.now()
 print(today)
 
-FiveDaysBefore = today.day - 20
-#today.day = FiveDaysBefore
-d2 = datetime.date(today.year, today.month, FiveDaysBefore)
-print(d2)
+# FiveDaysBefore = today.day - 20
+# #today.day = FiveDaysBefore
+# d2 = datetime.date(today.year, today.month, FiveDaysBefore)
+# print(d2)
+
+utc_dt = datetime.datetime.now(datetime.timezone.utc)
+
+print("Local time {}".format(utc_dt.astimezone().isoformat()))
+print(utc_dt.strftime("%Z"))
+print(utc_dt.astimezone())
